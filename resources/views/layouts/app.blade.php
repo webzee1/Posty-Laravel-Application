@@ -19,7 +19,7 @@
                 </li>
 
                 <li>
-                    <a href="" class="p-3 font-medium">Post</a>
+                    <a href="{{ route('posts') }}" class="p-3 font-medium">Post</a>
                 </li>
             </ul>
 

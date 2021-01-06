@@ -71,6 +71,11 @@ return [
             'model' => App\Models\User::class,
         ],
 
+        'posts' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Post::class,
+        ],
+
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
