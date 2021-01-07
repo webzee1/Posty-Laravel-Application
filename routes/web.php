@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostLikeController;
+use App\Http\Controllers\UserPostController;
 
 
 /*
@@ -30,6 +31,9 @@ Route::get('/dashboard' , [DashboardController::class, 'index'])
 ->name('dashboard');
 // ->middleware('auth');
 //Laravel Buildin Authentication Middleware to prevent someone from redirecting to a page like Dashboard without Login
+
+
+Route::get('/users/{user:username}/posts' , [UserPostController::class, 'index'])->name('users.posts');
 
 Route::post('/logout' , [LogoutController::class, 'store'])->name('logout');
 
